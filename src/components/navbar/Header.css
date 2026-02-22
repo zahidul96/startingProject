@@ -1,0 +1,47 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: rgb(145, 43, 43);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+}
+.main-image {
+  border: 1px solid black;
+  width: 100%;
+  height: 23rem;
+  overflow: hidden;
+}
+.main-image img {
+  width: 110%;
+  object-fit: cover;
+}
+.cart {
+  border: none;
+  color: white;
+  padding: 0.75rem 3rem;
+  border-radius: 22px;
+  background-color: rgb(87, 73, 73);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+.badge {
+  background-color: #ab5533;
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.icon {
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-right: 0.5rem;
+}
