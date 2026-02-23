@@ -1,5 +1,4 @@
-.description {
-    border: 1px solid black;
+.descript {
   text-align: center;
   max-width: 42rem;
   width: 90%;
@@ -13,10 +12,10 @@
   box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
 }
 
-.description h2 {
+.descript h2 {
   font-size: 2rem;
   margin-top: 0;
 }
-.description p{
+.descript p{
     margin-top: 12px;
 }
