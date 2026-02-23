@@ -2,14 +2,16 @@ import React from "react";
 import Header from "./components/navbar/Header";
 import MealsSummary from "./Meals/MealsSummary";
 import AvailableMeals from "./Meals/AvailableMeals";
-const App=()=> {
+import Cart from "./components/navbar/Modal/CartModal";
+const App = () => {
   return (
-    <div>
-      <Header/>
-      <MealsSummary/>
-      <AvailableMeals/>
-    </div>
+    <React.Fragment>
+      <Cart />
+      <Header />
+      <MealsSummary />
+      <AvailableMeals />
+    </React.Fragment>
   );
-}
+};
 
 export default App;
