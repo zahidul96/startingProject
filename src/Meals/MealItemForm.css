@@ -1,0 +1,25 @@
+.form-input {
+}
+.form-input input {
+  width: 2rem;
+  border-radius: 3px;
+  border: 0.5px solid black;
+}
+.form-input label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.div-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+.form-input button {
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.35rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
