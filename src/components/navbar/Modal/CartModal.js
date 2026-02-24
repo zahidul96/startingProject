@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 import ReactDOM from "react-dom"
 import "./CartModal.css";
 const Backdrop = (props) => {
-  return <div className="backdrop"></div>;
+  return <div className="backdrop" onClick={props.onClose}></div>;
 };
-const ModalOverLay = () => {
+const ModalOverLay = (props) => {
   return (
     <div className="modal">
       <p>Sushi</p>
@@ -13,7 +13,7 @@ const ModalOverLay = () => {
         <span>35.22</span>
       </div>
       <div className="actions">
-        <button type="button" className={["button--alt"]}>
+        <button type="button" className={["button--alt"]} onClick={props.onCloseCart}>
           Close
         </button>
         <button type="button" className="button">
@@ -23,15 +23,15 @@ const ModalOverLay = () => {
     </div>
   );
 };
-const Cart = () => {
+const Cart = (props) => {
   return (
     <React.Fragment>
       {ReactDOM.createPortal(
-        <Backdrop />,
+        <Backdrop onClose={props.onCloseCart}/>,
         document.getElementById("backdrop-root"),
       )}
       {ReactDOM.createPortal(
-        <ModalOverLay />,
+        <ModalOverLay onCloseCart={props.onCloseCart}/>,
         document.getElementById("overlay-root"),
       )}
     </React.Fragment>
