@@ -18,6 +18,7 @@ const Header = (props) => {
             <FontAwesomeIcon icon={faCartShopping} className="icon" />
             <span>Your cart</span>
             <span className="badge">{quantity}</span>
+            {console.log("hedad is called")}
         </div>
       </header>
       <div className="main-image">

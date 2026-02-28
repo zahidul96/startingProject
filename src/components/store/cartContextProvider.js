@@ -5,7 +5,10 @@ const CartProvider = (props) => {
   const addItemToCartHandler = (item) => {
         updateItems([...items,item])
   };
-  const removeItemToCartHandler = (id) => {};
+  const removeItemToCartHandler = (id) => {
+    const newData = items.filter((ele)=>ele.id !==id)
+    updateItems(newData)
+  };
   const cartContext = {
     item:items,
     totalAmount:0,

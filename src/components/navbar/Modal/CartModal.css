@@ -27,6 +27,13 @@
   font-size: 1.5rem;
   margin: 1rem 0;
 }
+.cart-items li{
+  list-style: none;
+}
+.list-item{
+  display: flex;
+  flex-direction: column;
+}
 
 .actions {
   text-align: right;
@@ -43,6 +50,16 @@
 }
 .actions .button--alt {
   color: #8a2b06;
+}
+.btn{
+  cursor: pointer;
+  background-color: rgb(139, 89, 89);
+  color: white;
+  border: 1px solid #8a2b06;
+  padding: 0.3rem 1rem;
+  border-radius: 15px;
+  margin-left: 1rem;
+  align-self: flex-end;
 }
 
 .actions .button {

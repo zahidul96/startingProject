@@ -7,24 +7,31 @@ const Backdrop = (props) => {
 };
 const ModalOverLay = (props) => {
   const crtctx = useContext(CartContext);
+  const removeItemHandler = (id) => {
+    crtctx.removeItem(id);
+  };
   const cartItems = (
     <ul>
-      {crtctx.item.map(
-        (ele)=> (
-          <li>
-            Name{ele.name} price{ele.price} Quantity{ele.quantity}
-          </li>))}
+      {crtctx.item.map((ele) => (
+        <li key={ele.id} className="list-item">
+          <span>{ele.name}</span> 
+          <span>Price {ele.price}</span> 
+          Qty:{ele.quantity}
+          <button className="btn" onClick={() => removeItemHandler(ele.id)}>
+            -
+          </button>
+        </li>
+      ))}
     </ul>
   );
-  let total = 0
-  let quantity = 0
-  crtctx.item.forEach((ele)=>{
-       total=total+ele.price 
-  })
-  crtctx.item.forEach((ele)=>{
-       quantity=quantity+Number(ele.quantity) 
-       console.log(quantity)
-  })
+  let total = 0;
+  let quantity = 0;
+  crtctx.item.forEach((ele) => {
+    total = total + ele.price;
+  });
+  crtctx.item.forEach((ele) => {
+    quantity = quantity + Number(ele.quantity);
+  });
   return (
     <div className="modal">
       {cartItems}

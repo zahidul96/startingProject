@@ -5,6 +5,7 @@ import AvailableMeals from "./Meals/AvailableMeals";
 import Cart from "./components/navbar/Modal/CartModal";
 import CartProvider from "./components/store/cartContextProvider";
 const App = () => {
+
   const [cartIsShown, setCartIsShown] = useState(false);
   const showCartHandler = () => {
     setCartIsShown(true);

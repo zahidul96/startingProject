@@ -8,7 +8,6 @@ const MealItemForm = (props) => {
   };
   const crtctx = useContext(CartContext);
   const addItemsToCart = (event) => {
-    console.log("form was called")
     event.preventDefault();
     crtctx.addItem({ ...props.item, quantity: enteredquantity });
     setQuantity("")
@@ -24,7 +23,7 @@ const MealItemForm = (props) => {
       />
       <br />
       <div className="div-button">
-        <button type="submit">+Add</button>
+        <button type="submit">+ Add</button>
       </div>
     </form>
   );
